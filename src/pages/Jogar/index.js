@@ -16,7 +16,11 @@ export default function Jogar({ match }) {
       <div>
         <h1>Jogando paramsX: {match.params.parametros}</h1>
         <ul>
-          { lista.mLista.map(lista =><Link to="/jogar"> <li>{lista}</li></Link>) }
+          { lista.mLista.map(lista =>
+            <li key={lista}>
+              <Link to='/jogar'> {lista} </Link>
+            </li>)
+          }
         </ul>
       </div>
       </ContainerJogar>
